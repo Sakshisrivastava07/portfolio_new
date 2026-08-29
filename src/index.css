@@ -1,0 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  background: #0c0c0c;
+  width: 100%;
+  min-height: 100%;
+}
+
+body {
+  font-family: 'Kanit', sans-serif;
+}
+
+.hero-heading {
+  background: linear-gradient(180deg, #646973 0%, #bbccd7 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+@keyframes charm-float {
+  0%,
+  100% {
+    transform: translateY(-8px);
+  }
+  50% {
+    transform: translateY(8px);
+  }
+}
+
+@keyframes charm-float-flip {
+  0%,
+  100% {
+    transform: scaleX(-1) translateY(-8px);
+  }
+  50% {
+    transform: scaleX(-1) translateY(8px);
+  }
+}
+
+.charm-float {
+  animation: charm-float 5.5s ease-in-out infinite;
+}
+
+.charm-float-flip {
+  animation: charm-float-flip 5.5s ease-in-out infinite;
+}
+
+/* Feathers the avatar frames so their rectangular edges blend into the dark
+   background instead of showing a hard crop line, strongest at the bottom
+   where the crop is most visible. Declared in a stylesheet (not inline
+   style) so the two -webkit-mask-composite fallback values below can both
+   be listed — the browser keeps whichever it understands and drops the
+   other, which a single JS style object can't express. */
+.avatar-frame-mask {
+  mask-image:
+    linear-gradient(to bottom, black 75%, transparent 100%),
+    linear-gradient(to top, black 92%, transparent 100%),
+    linear-gradient(to left, black 92%, transparent 100%),
+    linear-gradient(to right, black 92%, transparent 100%);
+  mask-composite: intersect;
+  -webkit-mask-image:
+    linear-gradient(to bottom, black 75%, transparent 100%),
+    linear-gradient(to top, black 92%, transparent 100%),
+    linear-gradient(to left, black 92%, transparent 100%),
+    linear-gradient(to right, black 92%, transparent 100%);
+  -webkit-mask-composite: source-in, source-in, source-in;
+  -webkit-mask-composite: destination-in;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
