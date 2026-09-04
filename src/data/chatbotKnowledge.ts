@@ -48,6 +48,28 @@ export const INTENTS: Intent[] = [
     quickReply: 'Achievements',
   },
   {
+    id: 'personal',
+    keywords: [
+      'age',
+      'old',
+      'hobby',
+      'hobbies',
+      'gujarat',
+      'hometown',
+      'badminton',
+      'doodle',
+      'doodling',
+      'singing',
+      'sing',
+      'fun fact',
+      'fun facts',
+      'personal',
+    ],
+    response:
+      "Sakshi is 20 years old and grew up in Gujarat. Outside of code, she enjoys playing badminton, doodling, and singing.",
+    quickReply: 'Fun Facts',
+  },
+  {
     id: 'contact',
     keywords: ['contact', 'email', 'reach', 'linkedin', 'github', 'hire'],
     response:
