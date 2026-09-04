@@ -4,7 +4,7 @@ import ContactButton from '../components/ContactButton';
 import { CHARMS } from '../constants/charms';
 
 const ABOUT_TEXT =
-  "I'm a B.Tech Information Science student at MS Ramaiah University, building at the intersection of AI, machine learning, and full-stack development. From a RAG-powered legal research tool to a minimax Othello AI, i like turning hard problems into working software, backed by 300+ LeetCode solved and a habit of shipping. Let's build something incredible together!";
+  "I'm a B.Tech Information Science student at MS Ramaiah University, building at the intersection of AI, machine learning, and full-stack development. From a RAG-powered legal research tool to a minimax Othello AI, I like turning hard problems into working software, backed by 300+ LeetCode solved and a habit of shipping. Let's build something incredible together!";
 
 export default function AboutSection() {
   return (
@@ -87,7 +87,7 @@ export default function AboutSection() {
         <div className="flex flex-col items-center gap-16 sm:gap-20 md:gap-24">
           <AnimatedText
             text={ABOUT_TEXT}
-            className="text-[#D7E2EA] font-medium text-center leading-relaxed max-w-[560px]"
+            className="text-[#D7E2EA] font-medium text-center leading-relaxed max-w-[720px]"
             style={{ fontSize: 'clamp(1rem, 2vw, 1.35rem)' }}
           />
           <FadeIn delay={0.1}>
