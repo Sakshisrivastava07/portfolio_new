@@ -108,7 +108,7 @@ export default function HeroSection() {
       </div>
 
       {/* Bottom bar */}
-      <div className="flex flex-col sm:flex-row justify-between sm:items-end gap-4 sm:gap-0 pb-7 sm:pb-8 md:pb-10 px-6 md:px-10 mt-auto relative z-20">
+      <div className="flex flex-col sm:flex-row justify-between sm:items-end gap-4 sm:gap-0 pb-7 sm:pb-8 md:pb-10 pl-6 pr-6 sm:pr-24 md:pl-10 md:pr-28 mt-auto relative z-20">
         <FadeIn delay={0.35} y={20}>
           <p
             className="text-[#D7E2EA] font-light uppercase tracking-wide leading-snug max-w-[220px] sm:max-w-[220px] md:max-w-[280px]"

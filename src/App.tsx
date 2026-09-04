@@ -7,6 +7,7 @@ import ProjectsSection from './sections/ProjectsSection';
 import AchievementsSection from './sections/AchievementsSection';
 import EducationSection from './sections/EducationSection';
 import ContactSection from './sections/ContactSection';
+import ChatWidget from './components/ChatWidget';
 
 export default function App() {
   return (
@@ -20,6 +21,7 @@ export default function App() {
       <AchievementsSection />
       <EducationSection />
       <ContactSection />
+      <ChatWidget />
     </div>
   );
 }
